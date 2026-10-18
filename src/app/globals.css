@@ -24,3 +24,63 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* ===== Karanlık mod uyumu ===== */
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0d0d12;
+    color: #e5e7eb;
+  }
+
+  select option {
+    background: #17171f;
+    color: #e5e7eb;
+  }
+
+  /* Yüzeyler */
+  .bg-white { background-color: #17171f; }
+  .bg-white\/95 { background-color: rgba(13, 13, 18, 0.95); }
+  .bg-white\/90 { background-color: rgba(23, 23, 31, 0.9); }
+  .bg-gray-50 { background-color: #1c1c26; }
+  .bg-gray-50\/60 { background-color: rgba(255, 255, 255, 0.04); }
+  .bg-gray-100 { background-color: #23232e; }
+  .bg-purple-50 { background-color: #1f1730; }
+  .bg-purple-50\/50 { background-color: rgba(124, 58, 237, 0.08); }
+  .bg-purple-200 { background-color: #3b2a5c; }
+  .bg-indigo-50 { background-color: #181b36; }
+  .focus\:bg-white:focus { background-color: #17171f; }
+  .hover\:bg-gray-100:hover { background-color: #23232e; }
+  .hover\:bg-purple-50:hover { background-color: #261b3d; }
+  .hover\:bg-purple-100:hover { background-color: #2d2142; }
+
+  /* Yazı renkleri */
+  .text-gray-900 { color: #f3f4f6; }
+  .text-gray-700 { color: #d1d5db; }
+  .text-gray-600 { color: #c4c8d0; }
+  .text-gray-500 { color: #9ca3af; }
+  .text-gray-400 { color: #8b93a1; }
+  .text-gray-300 { color: #4b5563; }
+  .text-purple-700 { color: #c084fc; }
+  .text-purple-800 { color: #d8b4fe; }
+  .text-purple-900 { color: #e9d5ff; }
+  .text-indigo-600 { color: #a5b4fc; }
+  .text-indigo-900 { color: #e0e7ff; }
+  .text-amber-600 { color: #fbbf24; }
+
+  /* Çizgiler (önce genel, sonra özel renkler) */
+  .border,
+  .border-2,
+  .border-t,
+  .border-b {
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+  .border-gray-100 { border-color: rgba(255, 255, 255, 0.07); }
+  .border-gray-200 { border-color: rgba(255, 255, 255, 0.14); }
+  .border-purple-700 { border-color: #a855f7; }
+  .border-transparent { border-color: transparent; }
+  .hover\:border-purple-300:hover { border-color: #7c3aed; }
+  .hover\:border-red-300:hover { border-color: #f87171; }
+}

@@ -9,15 +9,13 @@ const slides = [
     text: "Sevdiğin kahramanlar detaylı eklemleri ve gerçekçi tasarımlarıyla koleksiyonuna katılmaya hazır.",
     button: "Aksiyon Figürlerini Gör",
     href: "/urunler?kategori=Aksiyon Figürü",
-    image: "/banners/aksiyon.jpg",
     bg: "from-purple-800 via-purple-700 to-indigo-600",
   },
   {
     title: "Funko Pop Dünyası",
     text: "Marvel'dan Star Wars'a binlerce karakter, sevimli Funko Pop figürleriyle rafında yerini alsın.",
     button: "Funko Popları Gör",
-    href: "/urunler?kategori=Funko",
-    image: "/banners/funko.jpg",
+    href: "/urunler?kategori=Funko Pop",
     bg: "from-fuchsia-700 via-pink-600 to-orange-500",
   },
   {
@@ -25,7 +23,6 @@ const slides = [
     text: "Sınırlı sayıda üretilen, koleksiyonerlerin aradığı özel heykeller ve statüler burada.",
     button: "Nadir Heykelleri Gör",
     href: "/urunler?kategori=Heykel",
-    image: "/banners/heykel.jpg",
     bg: "from-gray-900 via-slate-800 to-purple-900",
   },
 ];
@@ -112,19 +109,6 @@ export default function HeroSlider() {
             key={s.title}
             className={`relative flex h-[200px] w-full shrink-0 items-center bg-gradient-to-r px-6 sm:h-[250px] md:h-[300px] ${s.bg}`}
           >
-            {/* Arka plan görseli */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={s.image}
-              alt={s.title}
-              draggable={false}
-              onError={(e) => (e.currentTarget.style.display = "none")}
-              className="absolute inset-0 h-full w-full object-cover object-right"
-            />
-
-            {/* Yazıların okunması için soldan sağa koyu gölge */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-
             <div className="relative mx-auto w-full max-w-7xl px-4 md:px-12">
               <div className="max-w-xl text-white">
                 <h2 className="text-2xl font-extrabold drop-shadow sm:text-3xl md:text-4xl">
